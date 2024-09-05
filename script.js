@@ -5,6 +5,7 @@ let calcular = document.getElementById('calcular');
 let resultado = document.getElementById('resultado');
 
 function calcularValor() {
+    alert('Calculando');
     const amortizacao = Number(valor.value) / Number(parcelas.value);
     let saldo = Number(valor.value);
     resultado.innerHTML = '';
@@ -17,12 +18,12 @@ function calcularValor() {
         resultado.innerHTML += `
         <tr>
             <th scope="row">${i}</th>
-            <td>${parcela}</td>
-            <td>${juros}</td>
-            <td>${amortizacao}</td>
-            <td>${saldo}</td>
+            <td>${parcela.toFixed(2)}</td>
+            <td>${juros.toFixed(2)}</td>
+            <td>${amortizacao.toFixed(2)}</td>
+            <td>${saldo.toFixed(2)}</td>
         </tr>
-`
+        `;
     }
 }
 
